@@ -1,0 +1,27 @@
+MySql
+spring.datasource.url=jdbc:mysql://localhost:3308/spring_app?serverTimezone=America/Asuncion
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+
+Heroku Original
+spring.datasource.url=jdbc:mysql://n4m3x5ti89xl6czh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/l83y765xmxci6syw?serverTimezone=America/Asuncion
+spring.datasource.username=r8st9xraypkrbmh8
+spring.datasource.password=v44gosb6zm87fyhs
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.jpa.hibernate.ddl-auto=create
+spring.datasource.initialization-mode=always
+spring.jpa.show-sql=true
+
+Datos de las tablas
+INSERT INTO user (email, first_name, last_name, password, username) VALUES ('admin@admin.com', 'admin', 'admin', '$2a$04$n6WIRDQlIByVFi.5rtQwEOTAzpzLPzIIG/O6quaxRKY2LlIHG8uty', 'admin');
+INSERT INTO role (description, name) VALUES ('ROLE_ADMIN', 'ADMIN');
+INSERT INTO role (description, name) VALUES ('ROLE_USER', 'USER');
+INSERT INTO role (description, name) VALUES ('ROLE_SUPERVISOR', 'SUPERVISOR');
+INSERT INTO user_roles (user_id, role_id) VALUES ('1', '1');
+INSERT INTO ciudades (id, ciudad) VALUES ('1', 'Ciudad del Este');
+INSERT INTO ciudades (id, ciudad) VALUES ('2', 'Asuncion');
+INSERT INTO ciudades (id, ciudad) VALUES ('3', 'Aregua');
+INSERT INTO ciudades (id, ciudad) VALUES ('4', 'Encarnacion');
+INSERT INTO clientes (apellidos, email, nombres, telefono, ciudades_id, ciudades) VALUES ('Salinas', 'javier@gmail.com', 'Javier', '0992-462-576', '1', '1');
